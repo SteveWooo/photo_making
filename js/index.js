@@ -48,9 +48,11 @@ var bus = {
 		var ctx = Canvas.getCtx();
 		var config = this.config;
 		ctx.fillStyle = "#666";
+		ctx.save();
 		ctx.font = "bolder " + config.word.size + "px 'SimSun'";
 		ctx.fillText(config.word.data, config.word.x, config.word.y);
-		ctx.font = "bloder" +  config.title.size + "px '微软雅黑'";
+		ctx.restore();
+		ctx.font = "bolder " +  config.title.size + "px 'SimSun'";
 		ctx.fillText(config.title.data, config.title.x, config.title.y);
 		var canvas = Canvas.getCanvas();
 		var image = canvas.toDataURL('image/png');
@@ -62,9 +64,8 @@ var bus = {
 			option == "left" ? config[obj].x -= 2 : config[obj].x += 2;
 		} else if(option == "up" || option == "down"){
 			option == "up" ? config[obj].y -= 2 : config[obj].y += 2;
-		} 
-
-		else if (option == "smaller" || option == "bigger"){
+		} else if (option == "smaller" || option == "bigger"){
+			console.log(option)
 			option == "smaller" ? config[obj].size -= 2 : config[obj].size += 2;
 		}
 
