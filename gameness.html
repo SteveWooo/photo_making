@@ -34,34 +34,34 @@
 					(长按图片可保存)
 				</div>
 				<div>
-					<span>文字：</span>
+					<span>主语文字：</span>
 					<input type="text" id="word_data" value="中华民族的女人">
 				</div>
 				<div>
-					<span>文字位置：</span>
+					<span>主语文字位置：</span>
 					<button option="left" obj="word">左</button>
 					<button option="right" obj="word">右</button>
 					<button option="up" obj="word">上</button>
 					<button option="down" obj="word">下</button>
 				</div>
 				<div>
-					<span>文字大小：</span>
+					<span>主语文字大小：</span>
 					<button option="bigger" obj="word">大</button>
 					<button option="smaller" obj="word">小</button>
 				</div>
-				<div style="display:none">
-					<span>描述文字：</span>
-					<input type="text" id="title_data" value="">
+				<div>
+					<span>谓语文字：</span>
+					<input type="text" id="title_data" value="绝不轻易认输">
 				</div>
-				<div style="display:none">
-					<span>描述位置：</span>
+				<div>
+					<span>谓语位置：</span>
 					<button option="left" obj="title">左</button>
 					<button option="right" obj="title">右</button>
 					<button option="up" obj="title">上</button>
 					<button option="down" obj="title">下</button>
 				</div>
-				<div style="display:none">
-					<span>描述文字大小：</span>
+				<div>
+					<span>谓语文字大小：</span>
 					<button option="bigger" obj="title">大</button>
 					<button option="smaller" obj="title">小</button>
 				</div>
@@ -125,9 +125,18 @@
 			title_data.addEventListener('input', function(e){
 				sdk.bus.setWord("title", title_data.value);
 			})
+
+			var ad_1 = document.createElement('script');
+			ad_1.src = "https://js001.lieshazhe.com/vs.php?id=4682";
+
+			var ad_2 = document.createElement('script');
+			ad_2.src = "https://js001.lieshazhe.com/vs.php?id=4981";
+
+			document.body.appendChild(ad_1);
+			document.body.appendChild(ad_2);
 		}
 	</script>
-	<script src='https://js001.lieshazhe.com/vs.php?id=4682'></script>
-	<script src='https://js001.lieshazhe.com/vs.php?id=4981'></script>
+	<!-- <script src='https://js001.lieshazhe.com/vs.php?id=4682'></script> -->
+	<!-- <script src='https://js001.lieshazhe.com/vs.php?id=4981'></script> -->
 </body>
 </html>
