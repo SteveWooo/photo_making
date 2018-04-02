@@ -73,8 +73,8 @@ function PMSdk(options, config) {
 		draw : function(){
 			this.setImage();
 			for(var i in _config){
-				console.log(_config[i])
 				ctx.save();
+				ctx.fillStyle = _config[i].fillStyle || "black";
 				ctx.font = "bolder " + _config[i].size + "px 'SimSun'";
 				ctx.fillText(_config[i].data, _config[i].x, _config[i].y);
 				ctx.restore();
