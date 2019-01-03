@@ -71,11 +71,14 @@
 	<div style="height: 150px;position: absolute;width:90%"></div>
 	<hr>
 	<div style="width:100%;height: 50px;line-height: 50px;text-align: center">
-		<a href="http://www.miitbeian.gov.cn">备案号：粤ICP备16050563号-1</a>
+		<a id="action" href="http://www.miitbeian.gov.cn">备案号：粤ICP备16050563号-1</a>
 	</div>
 	<!-- <script type="text/javascript" src="./js/index.js"></script> -->
 	<script type="text/javascript" src="./js/sdk.js"></script>
 	<script type="text/javascript">
+		document.getElementById("action").addEventListener("click", function(){
+			window.href = "http://www.miitbeian.gov.cn";
+		})
 		window.onload = function(){
 			var sdk = new PMSdk({
 				canvasid : "photo",
